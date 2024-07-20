@@ -51,21 +51,42 @@
 
 
  //constchanges
-
- const  PI  = 3.14512 ; 
- let radius = 5 ; 
- let circumference  ; 
+//  const  PI  = 3.14512 ; 
+//  let radius = 5 ; 
+//  let circumference  ; 
 //  radius = window.prompt("enter radius");
 //  radius = Number(radius);
 // circumference = 2 * pi * radius ; 
 // console.log(circumference); 
+// second way 
+// document.getElementById("calculate").onclick = function() { 
+//   radius =   document.getElementById("text").value ; 
+//    radius = Number(radius);
+//   circumference = 2 * PI * radius ;
+//   document.getElementById("h3").textContent =circumference + "cm"; 
 
-document.getElementById("calculate").onclick = function() { 
-  radius =   document.getElementById("text").value ; 
-   radius = Number(radius);
-  circumference = 2 * PI * radius ;
-  document.getElementById("h3").textContent =circumference + "cm"; 
+// }
 
+
+const decreaseBtn = document.getElementById("decreaseBtn");
+const resetBtn = document.getElementById("resetBtn");
+const increaseBtn = document.getElementById("increaseBtn");
+const countlabel = document.getElementById("countlabel");
+let countlabelValue = 0; 
+ 
+increaseBtn.onclick = function() {
+     countlabelValue++;
+     countlabel.textContent = countlabelValue;
 }
 
+
+decreaseBtn.onclick = function() {
+    countlabelValue-- ; 
+    countlabel.textContent = countlabelValue;
+}
+
+resetBtn.onclick = function() {
+    countlabelValue = 0  ; 
+    countlabel.textContent = countlabelValue;
+}
 
